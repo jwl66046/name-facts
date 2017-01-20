@@ -35,14 +35,15 @@ while not last_name:
 
 
 ## Return name
-print("Your name is: " + first_name + " "+ last_name)
-# input("\n\tPress the enter key for more facts!")
+print("\nYour name is: {} {}".format(first_name, last_name))
 next_section()
 
 
 ## Total number of letters in their name
 total_letters = len(first_name) + len(last_name)
-print(first_name + ", your name has " + str(total_letters) + " letters in it!")
+print("{}, your name has {} letters in it!".format(first_name, total_letters))
 next_section()
 
+
+## Occurences of each letter in name
 
