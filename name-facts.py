@@ -11,18 +11,17 @@ A simple app that I am developing to work on Python skills.
 ## Declare variables
 first_name = ""
 last_name = ""
-total_letters = None
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 
 ## create functions
 
 def next_section():
-    input("\n\tPress the enter key to continue\n")
+	input("\n\tPress the enter key to continue\n")
 
 def parse_letters():
-    d = {}
-    x = str(total_letters)
+	d = {}
+	x = str(total_letters)
 
 
 ###########################
@@ -34,9 +33,9 @@ print("\n\nWelcome to John's Name Facts Program!")
 next_section()
 
 while not first_name:
-    first_name = input("Please enter your first name: ")
+	first_name = input("Please enter your first name: ")
 while not last_name:
-    last_name =  input("Please enter your last name: ")
+	last_name =  input("Please enter your last name: ")
 
 
 ## Return name
@@ -60,3 +59,15 @@ for key in alphabet:
 	if letter_count.count(key) != 0:
 		print(key, letter_count.count(key))
 next_section()
+
+
+## Tell which letters are not used in their name
+
+print("{}, these are the letters that are NOT used in your name:\n\n".format(first_name))
+
+for key in alphabet:
+    if letter_count.count(key) == 0:
+        print(key)
+
+next_section()
+
